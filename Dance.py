@@ -26,7 +26,7 @@ class Dance:
         last = 0
         self.steps = []
         for step in match[4].strip().split('\n'):
-            step, length = re.match(r'(.*) \((\d+) counts\)', step).groups()
+            step, length = re.match(r'(.*) \((\d+) counts?\)', step).groups()
             length = int(length)
             for step in step.split(' : '):
                 for name, patt in repertoire.items():
